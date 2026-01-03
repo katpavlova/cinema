@@ -1,10 +1,10 @@
 .PHONY: check format
 
 check:
-	poetry run ruff check .
-	poetry run mypy .
+	poetry run ruff check cinema_api_gateway
+	poetry run mypy cinema_api_gateway
 
 format:
-	poetry run ruff format .
-	poetry run ruff check . --fix
-	poetry run mypy .
+	poetry run ruff format cinema_api_gateway
+	poetry run ruff check cinema_api_gateway --fix
+	poetry run mypy cinema_api_gateway
