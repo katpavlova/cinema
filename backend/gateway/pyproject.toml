@@ -2,9 +2,11 @@
 name = "gateway"
 version = "0.0.1"
 description = "Cinema API Gateway"
-authors = ["Katerina <you@example.com>"]
 readme = "README.md"
 requires-python = ">=3.13"
+authors = [
+    {name = "Katerina"}
+]
 
 [build-system]
 requires = ["poetry-core>=1.9.0"]
