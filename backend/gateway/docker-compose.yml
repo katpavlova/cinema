@@ -1,0 +1,9 @@
+services:
+  gateway:
+    container_name: gateway
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "${CINEMA__GATEWAY__PORT}:8000"
