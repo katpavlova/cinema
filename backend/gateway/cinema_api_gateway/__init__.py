@@ -1,6 +1,5 @@
 import uvicorn
-
-from cinema_api_gateway.main import app
+from main import app
 
 
 def run() -> None:
