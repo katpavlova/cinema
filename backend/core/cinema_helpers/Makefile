@@ -3,7 +3,7 @@
 PYPI_REPOSITORY_URL := https://nexus-dev.cinema.me/repository/pypi-private/
 
 build:
-	python3 -m build --wheel --outdir dist
+	poetry run python3 -m build --wheel --outdir dist
 
 
 publish:
