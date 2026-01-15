@@ -14,8 +14,8 @@ def add_health_check(
         app: FastAPI,
         service: str,
         version: str,
-        branch: str,
-        status: str | None = None,
+        status: str,
+        branch: str | None = None,
         commit: str | None = None,
 ) -> None:
     """
@@ -25,6 +25,7 @@ def add_health_check(
     :param version: версия
     :param branch: ветка
     :param commit: коммит
+    :param status: статус
     """
     router = APIRouter(prefix="/health", tags=["HealthCheck"])
 
@@ -38,7 +39,7 @@ def add_health_check(
             service=service,
             branch=branch,
             commit=commit,
-            status="ok",
+            status=status,
         )
 
     app.include_router(router)
