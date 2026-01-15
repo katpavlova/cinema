@@ -1,7 +1,10 @@
-.PHONY: build clean
+.PHONY: build clean publish
+
+PYPI_REPOSITORY_URL := https://nexus-dev.cinema.me/repository/pypi-private/
 
 build:
 	python3 -m build --wheel --outdir dist
 
-clean:
-	rm -rf dist *.egg-info
+
+publish:
+	poetry run python3 -m twine upload --repository-url $(PYPI_REPOSITORY_URL) dist/*
